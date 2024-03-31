@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light grey background for contrast */
+}
+
+.subcontact {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+.subcontact:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.subcontact h3 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.round {
+    width: 340px;
+    height: 51px;
+    border-radius: 50px;
+    background-color: #0051d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+    padding: 25px 10px 10px 10px;
+}
+
+.round:hover {
+    background-color: #003ea1; /* Darken background on hover */
+}
+
+.round h5 {
+    color: #ffffff;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling on hover */
+}
+
+.round:hover h5 {
+    transform: scale(1.1); /* Enlarge text slightly on hover */
+}

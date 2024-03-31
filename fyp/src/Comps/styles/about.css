@@ -1,0 +1,106 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #f9f9fb; /* Soft background color */
+    color: #333; /* Dark text color for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+.team-section, .jaundice-info-section {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on mobile */
+    align-items: center;
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #e6eaff, #ffffff);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Limit width and center */
+}
+
+@media (min-width: 768px) {
+    /* Horizontal layout for larger screens */
+    .team-section, .jaundice-info-section {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.team-section img, .jaundice-info-section img {
+    max-width: 300px; /* Fixed size for images */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-description, .jaundice-description {
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #0056b3; /* Themed color for headings */
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.8;
+    text-align: justify; /* Improve readability */
+}
+
+/* Other styles remain the same */
+
+.testimonials-section {
+    text-align: center;
+    padding: 40px;
+    margin: 40px 0;
+    background: linear-gradient(135deg, #cae9ff, #f6f6f6);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+}
+
+.testimonials-section::before, .testimonials-section::after {
+    content: '"';
+    font-size: 6rem;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.testimonials-section::before {
+    top: -20px;
+    left: 10px;
+}
+
+.testimonials-section::after {
+    bottom: -25px;
+    right: 15px;
+    transform: rotate(180deg);
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #333;
+    margin: 20px 0;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    display: inline-block;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials p {
+    color: #555;
+    font-weight: bold;
+    margin-top: 15px;
+}

@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body{
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Playfair Display", "serif";
+  line-height: 27px;
+  font-size: 14px;
+  color: rgb(121, 121, 121);
+  font-weight: normal;
+}
