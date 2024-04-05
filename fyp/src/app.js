@@ -1,4 +1,3 @@
-// Backend Node.js with Express
 import express from "express";
 import bodyParser from "body-parser";
 import nodemailer from 'nodemailer';
@@ -14,7 +13,7 @@ const db = new pg.Client({
   host: "localhost",
   database: "jaundice",
   password: "Nabil",
-  port: 5432,
+  port: process.env.DATABASE_PORT,
 })
 db.connect()
 app.use(cors());
@@ -22,10 +21,10 @@ app.use(cors());
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // Use your email service
+  service: 'gmail', 
   auth: {
-    user: 'nabilalakhdar4@gmail.com', // Your email
-    pass: 'yqdz qdue uvgn jhho' // Your email password
+    user: 'nabilalakhdar4@gmail.com', 
+    pass: 'yqdz qdue uvgn jhho'
   }
 });
 
@@ -67,7 +66,7 @@ app.post('/send-email', (req, res) => {
   const { firstName, lastName, email, message } = req.body;
   const mailOptions = {
     from: email,
-    to: "nabilalakhdar4@gmail.com", 
+    to: process.env.MY_EMAIL, 
     subject: `New Message from ${firstName} ${lastName} ${email}`,
     text: message
   };
@@ -109,9 +108,6 @@ app.post('/register', async (req, res) => {
   }
 });
 
-
-
-
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   const query = "SELECT * FROM signup WHERE email=$1";
@@ -134,6 +130,5 @@ app.post("/login", async (req, res) => {
       res.status(500).send('Error logging in user');
   }
 });
-
 
 app.listen(port, () => console.log(`Server running on port ${port}`));

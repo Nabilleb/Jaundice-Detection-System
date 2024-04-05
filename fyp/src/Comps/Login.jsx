@@ -42,7 +42,6 @@ function Signup() {
           })
           .then(response => {
               if (response.ok) {
-                  // Extract the username part from the email
                   const username = email.split('@')[0];
                   console.log(username)
                   localStorage.setItem('username', username);
@@ -53,7 +52,7 @@ function Signup() {
           })
           .catch((error) => {
               console.error('Error:', error);
-              setErrorMessage('Failed to register. Please try again.');
+              setErrorMessage('Email or Password Inncorrect.');
           });
       }
   };

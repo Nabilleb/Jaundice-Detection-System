@@ -1,0 +1,11 @@
+[33mcommit 3cf31a2905caa5c236dd23da69f2e5a5e4966030[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Nabilleb <Nabilgreen500@gmail.com>
+Date:   Sun Mar 31 13:34:58 2024 +0300
+
+    Add all project files
+
+[33mcommit aecff9ccaffa07f9d30cb4f3e947ccbb50f93a00[m
+Author: Nabilleb <Nabilgreen500@gmail.com>
+Date:   Sun Mar 31 13:23:12 2024 +0300
+
+    Add initial .gitignore file

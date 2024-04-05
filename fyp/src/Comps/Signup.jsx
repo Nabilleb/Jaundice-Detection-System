@@ -35,10 +35,7 @@ function Signup() {
         } else if (password !== confirmPassword) {
             setErrorMessage("Passwords do not match.");
             return false;
-        } else if (!captchaValue) {
-            setErrorMessage("Please verify that you are not a robot.");
-            return false;
-        }
+        } 
         return true;
     };
 
@@ -53,6 +50,7 @@ function Signup() {
         .then(response => {
             if (response.ok) {
                 setModalIsOpen(true);
+                
             } else {
                 setErrorMessage('Failed to send verification code. Please try again.');
             }
@@ -79,7 +77,10 @@ function Signup() {
         })
         .then(response => {
             if (response.ok) {
-                navigate("/");
+                const username = email.split('@')[0];
+                  console.log(username)
+                  localStorage.setItem('username', username);
+                navigate("/")
             } else {
                 setErrorMessage('Verification failed. Please try again or resend the code.');
                 setVerificationCode('');
